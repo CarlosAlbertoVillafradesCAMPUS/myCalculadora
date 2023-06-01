@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(fondo.jpg);
+}
+strong{
+    font-size: 1.5rem;
+}
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+header{
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+header p{
+    font-size: 1.5rem;
+}
+header h1{
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.939);
+}
+fieldset{
+    text-align: center;
+    border-radius: 8px;
+    background-color: white;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin: 2px 0;
+}
+.containerInput{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+input {
+    margin-bottom: 10px;
+}
+#btnSubmit{
+    margin: 5px 0;
+}

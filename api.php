@@ -1,18 +1,21 @@
 <?php
-$operacion = $_POST['operacion']; // Operación matemática
-$resultado = null; // Variable para almacenar el resultado de la operación
+    $operacion = $_POST['operacion'];
+    $resultado = null;
 
-// Eliminar espacios en blanco
-$operacion = str_replace(' ', '', $operacion);
+    //eliminar espacios al principio y al final de la operacion
+    $operacion = trim($operacion);
+    try {
+        if (!preg_match('/^[0-9+\-*/^]+$/', $operacion)) {
+            $operacion = str_replace('^', '**', $operacion);
+            $resultado = eval("return $operacion;");
+        }
+    } catch (\Throwable $th) {
+        echo "ERROR!! Operación matemática inválida: $operacion!";
+    }
 
-// Validar caracteres permitidos
-if (!preg_match('/^[0-9+\-*/]+$/', $operacion)) {
-    eval("\$resultado = $operacion;");
-}else{
-    echo "Operación matemática inválida";
-}
-
-
-echo "Resultado: " . $resultado;
-
+    if (!is_null($resultado)) {
+        echo "el Resultado de la operacion ($operacion) es: " . $resultado;
+    }
+        
+    
 ?>
