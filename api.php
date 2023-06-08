@@ -16,6 +16,4 @@
     if (!is_null($resultado)) {
         echo "el Resultado de la operacion ($operacion) es: " . $resultado;
     }
-        
-    
 ?>

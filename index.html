@@ -15,14 +15,15 @@
     
     <div class="contenedor">
         <fieldset>
-            <p><h3 style="margin: 0;">IMPORTANTE</h3>se permiten lo siguiente simbolos: <strong>'+' </strong>,<strong>'-' </strong>,<strong>'*' </strong>,<strong>'/' </strong>,<strong>'**' </strong>,<strong>'^'</strong>.</p>
+            <p><h3 style="margin: 0;">IMPORTANTE</h3>se permiten lo siguiente simbolos: <strong> + </strong>,<strong> - </strong>,<strong> * </strong>,<strong> / </strong>,<strong> ** </strong>,<strong> ^ </strong>.</p>
             <form method="POST" action="api.php">
-                <label for="operacion">Ingresa la operación matemática:</label>
+                <label for="operacion">Operación matemática</label>
                 <div class="containerInput">
                     <input type="text" name="operacion" pattern="[0-9+\-*/()\^]+" id="operacion" required>
                 </div>
-                
-                <button id="btnSubmit" type="submit">Calcular</button>
+                <div class="containerButton">
+                    <button id="btnSubmit" type="submit">Calcular</button>
+                </div>
             </form>
         </fieldset>
     </div>
